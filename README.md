@@ -12,7 +12,7 @@ Create a new chain called `double-chain`. This chain should split all of its chi
 
 ## Acceptance Criteria
 - There should be a chain called `double-chain`
-- The chain should split it's children into two rows.
+- The chain should split it's children into two columns.
 - The user should be able to select 3 different display options (wide left, wide right, or even) from a dropdown.
 - The user must decide on the number of features to display in the first column of the chain.
 
