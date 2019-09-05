@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-export default ({
+const DefaultOutputType = ({
   children,
   contextPath,
   deployment,
@@ -27,3 +27,38 @@ export default ({
       <Fusion />
     </body>
   </html>
+
+DefaultOutputType.transform = {
+  arcio({ context }) {
+    const { props, contentCache } = context;
+
+    return {
+      contentType: 'application/json',
+      data: {
+        tree: props.tree,
+        renderables: props.renderables,
+        globalContent: props.globalContent,
+        featureContent: Object.assign(
+          {},
+          ...Object.keys(contentCache)
+            .map((sourceName) => {
+              const sourceCache = contentCache[sourceName];
+              return {
+                [sourceName]: Object.assign(
+                  {},
+                  ...Object.keys(sourceCache)
+                    .map((queryString) => {
+                      return {
+                        [queryString]: sourceCache[queryString] && sourceCache[queryString].filtered,
+                      };
+                    }),
+                ),
+              };
+            }),
+        ),
+      },
+    };
+  },
+};
+
+export default DefaultOutputType
