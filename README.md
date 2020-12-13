@@ -1,29 +1,6 @@
-# fusion-17
+# Lab 17
 
-## User story
-As a user, I would like to be able to have more control of how a feature will render by explicitly check the output type
-
-## Concepts
-- Using app context with multiple output types
-
-## New files:
--  `components/features/global/alert-bar/amp.jsx`
-
-## Updated Files:
--  `components/features/article/header/default.jsx`
-
-## What's next
-Just like that, our site now supports AMP! Let's learn a little bit more about how output types work together. Switch to `fusion-17` to learn more.
-
-If you are continuing this training from the last user story, then keep working on your current branch USERNAME-fusion-training.
-
-If you are starting this training from the eighteenth user story (task Fusion-18), then follow the steps under "What's next?" on the README file in the (https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-01/README.md)[fusion-01] branch - but checkout from fusion-17 instead.
-
-## Task: User Story 17
-
-As a user, I would like to prevent my output type from falling back onto default features and risking validation.
-
-## Guide
+Just like that, our site now supports AMP! Let's learn a little bit more about how output types work together. By default, the if fusion does not find a compatible version of the feature file to render like `amp.jsx`, it falls back to `default.jsx`. The steps below show you how to prevent it from falling back and instead prevent rendering that feature entirely.
 
 1. We will be adding setting the fallback value on our amp output type. Review the api for output types here and especially the section regarding fallback. https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/api/feature-pack/components/output-type.md
 
@@ -34,7 +11,4 @@ AmpOutputType.fallback = false
 
 3. `npx fusion rebuild` and features without an amp output type should no longer render.
 
-## Solution Files: User Story 17
-- [components/output-types/amp.js](https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-18/components/output-types/amp.jsx)
-
-### [Continue to Next Task: User Story 18](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/fusion-18)
+## Next up: Lab 18
