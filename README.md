@@ -27,12 +27,14 @@ fusion init
 ```
 fusion start
 ```
-5. Visit `localhost/pagebuilder/pages`
+5. Visit `http://localhost/pagebuilder/pages`. It might take a few minutes to load.
 6. To pick up changes when you create a new file, run:
 ```
 npx fusion rebuild
 ```
 in another terminal tab.
+
+### Their Instructions (use ours)
 
 1. Clone this repo
 ```
