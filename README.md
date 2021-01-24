@@ -10,6 +10,30 @@ It's important to note that the code in this repo may differ from the code writt
 ## Lab 00
 Running Fusion locally.
 
+### Spec Instructions
+1. Install the latest version of fusion
+```
+npm i -D @arc-fusion/cli@1.1.1-canary.1 
+```
+2. Make a directory for your training
+```
+mkdir fusion-training && cd fusion-training
+```
+3. Initialize the fusion repository
+```
+fusion init
+```
+4. Start your project!
+```
+fusion start
+```
+5. Visit `localhost/pagebuilder/pages`
+6. To pick up changes when you create a new file, run:
+```
+npx fusion rebuild
+```
+in another terminal tab.
+
 1. Clone this repo
 ```
 git clone git@github.com:wapopartners/Fusion-Training-User-Stories.git
