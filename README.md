@@ -13,7 +13,7 @@ Running Fusion locally.
 ### Spec Instructions
 1. Install the latest version of fusion
 ```
-npm i -D @arc-fusion/cli@1.1.1-canary.1 
+npm i -g -D @arc-fusion/cli@1.1.1-canary.1 
 ```
 2. Make a directory for your training
 ```
